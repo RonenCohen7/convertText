@@ -4,6 +4,10 @@ export function Menu() {
     return (
         <div className="Menu">
             <div className="tooltip">
+                <NavLink to="/home" title="home">🏠</NavLink>
+                <span className="tooltip-text">Document</span>
+            </div>
+            <div className="tooltip">
                 <NavLink to="/documents" title="Document">📄</NavLink>
                 <span className="tooltip-text">Document</span>
             </div>

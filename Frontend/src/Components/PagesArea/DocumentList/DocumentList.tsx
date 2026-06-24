@@ -19,6 +19,28 @@ export function DocumentList() {
     }, []);
 
 
+    async function deleteFile(id: string) {
+
+        const ok = window.confirm("Are you sure you want to delete this document?")
+        if(!ok) return;
+        try {
+            await documentServices.deleteDocument(id)
+            setDocuments(prev => prev.filter(doc => doc._id !== id));
+            if (selectedDocument?._id) {
+                setSelectedDocument(null)
+            }
+        }
+        catch (err: any) {
+            console.error(err);
+            alert("Delete failed");
+
+        }
+
+
+
+    }
+
+
     return (
         <div className="DocumentList">
             <section className="document-sidebar">
@@ -34,7 +56,7 @@ export function DocumentList() {
                         </div>
                         <div className="document-info">
                             <h3>{doc.originalName}</h3>
-                            <p>{doc.fileType.toUpperCase}</p>
+                            <p>{doc.fileType.toUpperCase()}</p>
                             <small>
                                 {new Date(doc.uploadDate).toLocaleDateString()}
                             </small>
@@ -61,19 +83,28 @@ export function DocumentList() {
                                 </p>
                             </div>
                             <div className="preview-actions">
-
+                                          <button className="btn-analyze"
+                            onClick={() => navigate(`/analyze/${selectedDocument._id}`)}
+                        >
+                            🕵🏻‍♂️
+                        </button>
+                        <br></br>
+                        <button
+                            className="btn-delete"
+                            onClick={() => deleteFile(selectedDocument._id)}
+                        >
+                            🗑️
+                        </button>
                             </div>
                         </div>
-                        <div className="fack-document">
+                        <div className="fake-document">
                             <pre>
                                 {selectedDocument?.extractedText}
                             </pre>
                         </div>
-                        <button className="btn-analyze"
-                            onClick={() => navigate(`/analyze/${selectedDocument._id}`)}
-                        >
-                            Analyze
-                        </button>
+              
+
+
                     </>
 
                 )}
