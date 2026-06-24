@@ -1,0 +1,22 @@
+# Dependencies
+node_modules
+
+# Build
+dist
+build
+
+# Environment
+.env
+
+# Uploads
+Backend/src/assets/uploads
+
+# Logs
+logs
+*.log
+
+# Mac
+.DS_Store
+
+# VSCode
+.vscode
