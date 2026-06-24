@@ -1,0 +1,68 @@
+.Menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    padding: 18px 24px;
+
+    background: #161b22;
+
+    border-bottom: 1px solid #29a9f3;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.Menu a {
+    text-decoration: none;
+
+    color: #e8e8e8;
+
+    padding: 10px 18px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.Menu a:hover {
+    background: #07517c;
+    color: white;
+}
+
+.Menu .active {
+    background: #8b7cff;
+    color: white;
+}
+
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+.tooltip-text {
+    visibility: hidden;
+
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: #222;
+    color: white;
+
+    padding: 6px 12px;
+    border-radius: 6px;
+
+    font-size: 12px;
+    white-space: nowrap;
+
+    opacity: 0;
+    transition: 0.2s;
+}
+.tooltip:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,81 @@
+.AnalyzeDocument {
+    min-height: calc(100vh - 40px);
+    padding: 32px;
+    box-sizing: border-box;
+    background: #0f111a;
+    color: #e8e8e8;
+    text-align: left;
+}
+
+.AnalyzeDocument h2 {
+    margin: 0 0 24px;
+    font-size: 30px;
+    color: white;
+}
+
+.analysis-card {
+    max-width: 760px;
+    padding: 28px;
+    border-radius: 16px;
+    background: #161b22;
+    box-shadow:
+        0 0 12px rgba(0, 0, 0, 0.25),
+        0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.analysis-row {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid #2b313a;
+}
+
+.analysis-row:last-child {
+    border-bottom: none;
+}
+
+.analysis-label {
+    font-weight: bold;
+    color: #8b7cff;
+}
+
+.analysis-value {
+    color: #ffffff;
+    word-break: break-word;
+}
+
+.analysis-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: 28px;
+}
+
+.stat-box {
+    padding: 22px;
+    border-radius: 14px;
+    background: white;
+    color: #111;
+    text-align: center;
+}
+
+.stat-box h3 {
+    margin: 0;
+    font-size: 28px;
+    color: #07517c;
+}
+
+.stat-box p {
+    margin: 8px 0 0;
+    color: #555;
+    font-weight: bold;
+}
+
+.loading {
+    color: #aaa;
+    font-size: 20px;
+}
+.btn-back-home {
+    cursor: pointer;
+}

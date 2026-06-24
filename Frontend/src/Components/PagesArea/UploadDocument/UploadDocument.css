@@ -1,0 +1,64 @@
+.UploadDocument {
+    min-height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0f111a;
+}
+
+.upload-card {
+    width: 480px;
+    padding: 40px;
+    border-radius: 18px;
+    background: #161b22;
+    color: white;
+    text-align: center;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.35);
+}
+
+.upload-card h2 {
+    margin: 0 0 28px;
+    font-size: 28px;
+}
+
+.upload-card input[type="file"] {
+    width: 100%;
+    padding: 14px;
+    box-sizing: border-box;
+    border: 1px dashed #29a9f3;
+    border-radius: 12px;
+    background: #0f111a;
+    color: white;
+    cursor: pointer;
+}
+
+.file-info {
+    margin: 22px 0;
+    padding: 14px;
+    border-radius: 12px;
+    background: white;
+    color: #111;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.btn-upload {
+    width: 100%;
+    padding: 13px;
+    border: none;
+    border-radius: 12px;
+    background: #07517c;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-upload:hover {
+    background: #8b7cff;
+}
+
+.btn-upload:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
